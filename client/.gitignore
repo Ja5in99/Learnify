@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+.vscode
+/bin
+*/bin
+*.debug
 
 # testing
 /coverage
