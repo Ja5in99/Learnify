@@ -4,19 +4,25 @@ using System.Linq;
 using System.Threading.Tasks;
 using Entity;
 using Entity.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure
 {
     public class CourseRepository : ICourseRepository
     {
-        Task<Course> GetCourseByIdAsync(int id)
+        private readonly StoreContext _context;
+        public CourseRepository(StoreContext context)
         {
-            throw new System.NotImplementedException();
+            _context = context;
+        }
+        public async Task<Course> GetCourseByIdAsync(Guid id)
+        {
+            return await _context.Courses.FindAsync(id);
         }
 
-        Task<IReadOnlyList<Course>> GetCoursesAsync()
+        public async Task<IReadOnlyList<Course>> GetCoursesAsync()
         {
-            throw new System.NotImplementedException();
+            return await _context.Courses.ToListAsync();
         }
     }
 }

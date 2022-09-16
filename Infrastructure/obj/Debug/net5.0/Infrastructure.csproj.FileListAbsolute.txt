@@ -1,0 +1,15 @@
+C:\Users\Jasin\Documents\Learnify\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Jasin\Documents\Learnify\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jasin\Documents\Learnify\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Jasin\Documents\Learnify\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
+C:\Users\Jasin\Documents\Learnify\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Jasin\Documents\Learnify\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+C:\Users\Jasin\Documents\Learnify\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
+C:\Users\Jasin\Documents\Learnify\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
+C:\Users\Jasin\Documents\Learnify\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+C:\Users\Jasin\Documents\Learnify\Infrastructure\bin\Debug\net5.0\Entity.dll
+C:\Users\Jasin\Documents\Learnify\Infrastructure\bin\Debug\net5.0\Entity.pdb
+C:\Users\Jasin\Documents\Learnify\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
+C:\Users\Jasin\Documents\Learnify\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
+C:\Users\Jasin\Documents\Learnify\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
+C:\Users\Jasin\Documents\Learnify\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb

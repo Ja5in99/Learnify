@@ -1289,34 +1289,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Jasin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Documents\\Skolan\\Learnify\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Jasin\\Documents\\Learnify\\api\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\Admin\\Documents\\Skolan\\Learnify\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Documents\\Skolan\\Learnify\\API\\obj\\",
+      "projectPath": "C:\\Users\\Jasin\\Documents\\Learnify\\api\\API.csproj",
+      "packagesPath": "C:\\Users\\Jasin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jasin\\Documents\\Learnify\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Jasin\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\Documents\\Skolan\\Learnify\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Documents\\Skolan\\Learnify\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\Jasin\\Documents\\Learnify\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Jasin\\Documents\\Learnify\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
