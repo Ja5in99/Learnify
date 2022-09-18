@@ -1,37 +1,52 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using API.Dto;
+using AutoMapper;
 using Entity;
 using Entity.Interfaces;
+using Entity.Specifications;
 using Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+
 
 namespace API.Controllers
 {
     public class CoursesController : BaseController
     {
-        private readonly ICourseRepository _repository;
-        public CoursesController(ICourseRepository repository)
+
+        private readonly IMapper _mapper;
+        private readonly IGenericRepository<Course> _repository;
+
+        public CoursesController(IGenericRepository<Course> repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
         [HttpGet]
 
-        public async Task<ActionResult<List<Course>>> GetCourses()
+        public async Task<ActionResult<IReadOnlyList<CourseDto>>> GetCourses()
         {
-            var courses = await _repository.GetCoursesAsync();
-            return Ok(courses);
+            var spec = new CoursesWithCategoriesSpecification();
+
+            var courses = await _repository.ListWithSpec(spec);
+            return Ok(_mapper.Map<IReadOnlyList<Course>, IReadOnlyList<CourseDto>>(courses));
         }
-        
+
         [HttpGet("{id}")]
 
-        public async Task<ActionResult<Course>> GetCourse(Guid id)
+        public async Task<ActionResult<CourseDto>> GetCourse(Guid id)
         {
-            return await _repository.GetCourseByIdAsync(id);
+            var spec = new CoursesWithCategoriesSpecification(id);
+
+            var course = await _repository.GetEntityWithSpec(spec);
+
+            return _mapper.Map<Course, CourseDto>(course);
+
         }
 
-        
+
     }
 }

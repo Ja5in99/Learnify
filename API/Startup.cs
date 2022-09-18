@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Infrastructure;
+using API.Helpers;
 using Entity.Interfaces;
+using Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -15,7 +16,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace test
+namespace API
 {
     public class Startup
     {
@@ -23,14 +24,18 @@ namespace test
         public Startup(IConfiguration config)
         {
             _config = config;
+
         }
 
 
 
         // This method gets called by the runtime. Use this method to add services to the container.
-           public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
+            services.AddAutoMapper(typeof(MappingProfiles));
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddControllers();
             services.AddDbContext<StoreContext>(x =>
             {
@@ -39,20 +44,21 @@ namespace test
 
 
             services.AddCors(opt =>
-           {
-               opt.AddPolicy("CorsPolicy", policy =>
-               {
-                   policy.AllowAnyHeader().AllowAnyMethod()
-                   .WithOrigins("http://localhost:3000");
-               });
-           });
-        
+            {
+                opt.AddPolicy("CorsPolicy", policy =>
+                {
+                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
+
+                });
+
+            });
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "test", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
             });
         }
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -60,10 +66,10 @@ namespace test
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "test v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
             }
 
-            // app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jasin\\Documents\\Learnify\\API\\API.csproj": {}
+    "C:\\Users\\Jasin\\Documents\\Learnify\\api\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jasin\\Documents\\Learnify\\API\\API.csproj": {
+    "C:\\Users\\Jasin\\Documents\\Learnify\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jasin\\Documents\\Learnify\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Jasin\\Documents\\Learnify\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Jasin\\Documents\\Learnify\\API\\API.csproj",
+        "projectPath": "C:\\Users\\Jasin\\Documents\\Learnify\\api\\API.csproj",
         "packagesPath": "C:\\Users\\Jasin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jasin\\Documents\\Learnify\\API\\obj\\",
+        "outputPath": "C:\\Users\\Jasin\\Documents\\Learnify\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jasin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -42,11 +42,15 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.17, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -59,7 +63,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -71,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -114,7 +119,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -123,7 +129,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -167,7 +173,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[5.0.6, )"
+              "version": "[5.0.17, )"
             }
           },
           "imports": [
@@ -176,7 +182,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -185,7 +192,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
