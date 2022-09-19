@@ -6,12 +6,14 @@ namespace Entity.Interfaces
 {
     public interface IGenericRepository<T>
     {
-        Task<IReadOnlyList<T>> ListAllAsync();
+          Task<IReadOnlyList<T>> ListAllAsync();
 
-        Task<T> GetByIdAsync(dynamic id);
+          Task<T> GetByIdAsync(dynamic id);
 
-        Task<T> GetEntityWithSpec(ISpecification<T> spec);
+          Task<T> GetEntityWithSpec(ISpecification<T> spec);
 
-        Task<IReadOnlyList<T>> ListWithSpec(ISpecification<T> spec);
+          Task<IReadOnlyList<T>> ListWithSpec(ISpecification<T> spec);
+
+          Task<int> CountResultAsync(ISpecification<T> spec);
     }
 }

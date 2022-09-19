@@ -42,6 +42,7 @@ namespace API
             services.AddDbContext<StoreContext>(x =>
             {
                 x.UseSqlite(_config.GetConnectionString("DefaultConnection"));
+                x => x.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery)
             });
 
 
@@ -59,7 +60,7 @@ namespace API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
             });
- services.Configure<ApiBehaviorOptions>(options =>
+            services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.InvalidModelStateResponseFactory = actionContext =>
                 {
