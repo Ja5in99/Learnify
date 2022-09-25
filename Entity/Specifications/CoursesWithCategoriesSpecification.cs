@@ -37,7 +37,7 @@ namespace Entity.Specifications
             IncludeMethod(c => c.Requirements);
             IncludeMethod(c => c.Learnings);
             IncludeMethod(c => c.Category);
-            SortMethod(x => x.Id);
+            SortMethod(c => c.Id);
         }
 
     }

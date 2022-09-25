@@ -40,6 +40,13 @@
     margin-top: 5px;
   }
 
+
+  .pagination {
+    margin-top: 50px;
+    display: flex;  
+  justify-content: center;
+  }
+  
   &__rating {
     color: #e59819;
     font-weight: bold;
