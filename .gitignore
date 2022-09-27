@@ -1,0 +1,8 @@
+.vscode/
+API/obj/
+Entity/obj/
+Infrastructure/obj/
+API/bin/
+Entity/bin/
+Infrastructure/bin/
+node_modules/
