@@ -1,7 +1,11 @@
 @import 'base';
+@import 'mixins';
 @import 'components/navigation';
 @import 'components/course';
 @import 'components/categories';
+@import 'components/loading';
+@import 'pages/app.scss';
 @import 'pages/description';
-@import "pages/login";
-@import "pages/checkout";
+@import 'pages/basket';
+@import 'pages/login';
+@import 'pages/checkout';
